@@ -7,7 +7,7 @@ const input = process.argv.slice(3).join(" ");
 
 // raise error
 if (!input || !option) {
-    console.error("Usage: node src/index.js <input format: [--text or --morse]> <type your input here>");
+    console.error("Usage: node src/index.js <--decode or --encode> <type your input here>");
     process.exit(1);
 }
 
@@ -19,6 +19,6 @@ if (option.toLowerCase() === "--encode") {
     const result = toMorse(input);
     console.log(result);
 } else {
-    console.error("Invalid translation option [--text or --morse]");
+    console.error("Invalid translation option [--decode or --encode]");
     process.exit(1);
 }
