@@ -8,21 +8,42 @@ A terminal-based utility for bidirectional translation between English text and 
  
 Node.js utility designed to practice Map data structures and $O(1)$ lookup algorithms. It features a programmatic "Inversion Strategy" to ensure a single source of truth for bidirectional translation.
 
+## Installation
+
+```bash
+git clone https://github.com/mshandywinata/morse-translator-cli.git
+cd morse-translator-cli
+npm link
+```
+
 ## Usage
 
-Translate text to Morse or vice-versa using CLI arguments.
-
-Text to Morse:
-
-```
-node src/index.js --text "Hello World"
-# Output: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+```bash
+morse-translator --<flag> "<string>"
 ```
 
-Morse to Text:
+### Flags
+
+| Flag | Description |
+|---|---|
+| `--encode` | Convert English text to Morse code |
+| `--decode` | Convert Morse code to English text |
+
+### Examples
+
+```bash
+morse-translator --encode "Hello World"
+morse-translator --decode ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 ```
-node src/index.js --morse ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
-# Output: HELLO WORLD
+
+### Sample Output
+
+```
+Encode:
+  Hello World → .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+
+Decode:
+  .... . .-.. .-.. --- / .-- --- .-. .-.. -.. → HELLO WORLD
 ```
 
 ## Logic

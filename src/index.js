@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { toMorse, toAlpha } from "./translator.js";
 
 // get the third and fourth index command as args
@@ -11,10 +12,10 @@ if (!input || !option) {
 }
 
 // branching option
-if (option.toLowerCase() === "--text") {
+if (option.toLowerCase() === "--encode") {
     const result = toAlpha(input);
     console.log(result);
-} else if (option.toLowerCase() === "--morse") {
+} else if (option.toLowerCase() === "--decode") {
     const result = toMorse(input);
     console.log(result);
 } else {
